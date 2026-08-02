@@ -1,0 +1,47 @@
+2026-05-18 01:36:24 INFO  (LoggingInitialization) Using log config file: jar:file:/opt/ghidra/Ghidra/Framework/Generic/lib/Generic.jar!/generic.log4j.xml  
+2026-05-18 01:36:24 INFO  (LoggingInitialization) Using log file: /home/avro102/.config/ghidra/ghidra_12.0.4_DEV/application.log  
+2026-05-18 01:36:24 INFO  (Preferences) Loading user preferences: /home/avro102/.config/ghidra/ghidra_12.0.4_DEV/preferences  
+2026-05-18 01:36:32 INFO  (ClassSearcher) Searching for classes...  
+2026-05-18 01:36:33 INFO  (ClassSearcher) Class search complete (1535 ms)  
+2026-05-18 01:36:34 INFO  (DefaultSSLContextInitializer) Initializing SSL Context  
+2026-05-18 01:36:34 INFO  (SecureRandomFactory) Initializing Random Number Generator...  
+2026-05-18 01:36:34 INFO  (SecureRandomFactory) Random Number Generator initialization complete: NativePRNGNonBlocking  
+2026-05-18 01:36:34 INFO  (DefaultTrustManagerFactory) Trust manager disabled, cacerts have not been set  
+2026-05-18 01:36:34 INFO  (GhidraRun) User avro102 started Ghidra.  
+2026-05-18 01:36:34 INFO  (GhidraRun) User settings directory: /home/avro102/.config/ghidra/ghidra_12.0.4_DEV  
+2026-05-18 01:36:34 INFO  (GhidraRun) User temp directory: /tmp/avro102-ghidra  
+2026-05-18 01:36:34 INFO  (GhidraRun) User cache directory: /var/tmp/avro102-ghidra  
+2026-05-18 01:36:34 DEBUG (DefaultProjectManager) No tools found; Installing default tools  
+2026-05-18 01:36:34 DEBUG (DefaultProjectManager) 	no recent project directories found  
+2026-05-18 01:36:35 DEBUG (RecoverySnapshotMgrPlugin) Recovery snapshot timer set to 5 minute(s)  
+2026-05-18 01:36:36 INFO  (GhidraRun) Ghidra startup complete (13008 ms)  
+2026-05-18 01:36:50 INFO  (LoggingInitialization) Using log config file: jar:file:/opt/ghidra/Ghidra/Framework/Generic/lib/Generic.jar!/generic.log4j.xml  
+2026-05-18 01:36:50 INFO  (LoggingInitialization) Using log file: /home/avro102/.config/ghidra/ghidra_12.0.4_DEV/application.log  
+2026-05-18 01:36:51 INFO  (Preferences) Loading user preferences: /home/avro102/.config/ghidra/ghidra_12.0.4_DEV/preferences  
+2026-05-18 01:36:54 INFO  (ClassSearcher) Searching for classes...  
+2026-05-18 01:36:56 INFO  (ClassSearcher) Class search complete (1475 ms)  
+2026-05-18 01:36:56 INFO  (DefaultSSLContextInitializer) Initializing SSL Context  
+2026-05-18 01:36:56 INFO  (SecureRandomFactory) Initializing Random Number Generator...  
+2026-05-18 01:36:56 INFO  (SecureRandomFactory) Random Number Generator initialization complete: NativePRNGNonBlocking  
+2026-05-18 01:36:56 INFO  (DefaultTrustManagerFactory) Trust manager disabled, cacerts have not been set  
+2026-05-18 01:36:56 INFO  (GhidraRun) User avro102 started Ghidra.  
+2026-05-18 01:36:56 INFO  (GhidraRun) User settings directory: /home/avro102/.config/ghidra/ghidra_12.0.4_DEV  
+2026-05-18 01:36:56 INFO  (GhidraRun) User temp directory: /tmp/avro102-ghidra  
+2026-05-18 01:36:56 INFO  (GhidraRun) User cache directory: /var/tmp/avro102-ghidra  
+2026-05-18 01:36:58 DEBUG (RecoverySnapshotMgrPlugin) Recovery snapshot timer set to 5 minute(s)  
+2026-05-18 01:36:58 INFO  (GhidraRun) Ghidra startup complete (8218 ms)  
+2026-05-24 20:07:13 INFO  (LoggingInitialization) Using log config file: jar:file:/opt/ghidra/Ghidra/Framework/Generic/lib/Generic.jar!/generic.log4j.xml  
+2026-05-24 20:07:13 INFO  (LoggingInitialization) Using log file: /home/avro102/.config/ghidra/ghidra_12.0.4_DEV/application.log  
+2026-05-24 20:07:13 INFO  (Preferences) Loading user preferences: /home/avro102/.config/ghidra/ghidra_12.0.4_DEV/preferences  
+2026-05-24 20:07:13 INFO  (ClassSearcher) Searching for classes...  
+2026-05-24 20:07:15 INFO  (ClassSearcher) Class search complete (1446 ms)  
+2026-05-24 20:07:15 INFO  (DefaultSSLContextInitializer) Initializing SSL Context  
+2026-05-24 20:07:15 INFO  (SecureRandomFactory) Initializing Random Number Generator...  
+2026-05-24 20:07:15 INFO  (SecureRandomFactory) Random Number Generator initialization complete: NativePRNGNonBlocking  
+2026-05-24 20:07:15 INFO  (DefaultTrustManagerFactory) Trust manager disabled, cacerts have not been set  
+2026-05-24 20:07:15 INFO  (GhidraRun) User avro102 started Ghidra.  
+2026-05-24 20:07:15 INFO  (GhidraRun) User settings directory: /home/avro102/.config/ghidra/ghidra_12.0.4_DEV  
+2026-05-24 20:07:15 INFO  (GhidraRun) User temp directory: /tmp/avro102-ghidra  
+2026-05-24 20:07:15 INFO  (GhidraRun) User cache directory: /var/tmp/avro102-ghidra  
+2026-05-24 20:07:17 DEBUG (RecoverySnapshotMgrPlugin) Recovery snapshot timer set to 5 minute(s)  
+2026-05-24 20:07:17 INFO  (GhidraRun) Ghidra startup complete (4962 ms)  

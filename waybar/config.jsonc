@@ -1,0 +1,186 @@
+// configuracion de waybar
+{
+  "layer": "top",
+  "position": "top",
+  "reload_style_on_change": true,
+  "reload_config_on_change": true,
+  "mode": "dock",
+  "exclusive": true,
+  "passthrough": false,
+  "gtk-layer-shell": true,
+  "height": 0,
+
+  "modules-left": ["clock#day","hyprland/workspaces"],
+  //  "modules-center": ["hyprland/window"],
+  "modules-right": [
+    "tray",
+    "network",
+    "battery",
+    //   "memory",
+    //   "cpu",
+    "backlight",
+    "pulseaudio",
+  ],
+
+  "hyprland/window": {
+    "format": "󰣇 {}"
+  },
+
+  "hyprland/workspaces": {
+    "disable-scroll": true,
+    "all-outputs": true,
+    "on-click": "activate",
+    "warp-on-scroll": false,
+    "format": "{icon}",
+    "persistent-workspaces": {
+      //      "eDP-1": [1,]
+    },
+    "format-icons": {
+      "1": "•",
+      "2": "२",
+      "3": "३",
+      "4": "५",
+      "5": "४",
+      "6": "७",
+      "7": "८",
+      "8": "६",
+      "9": "९",
+      "10": "०"
+      //   "10": "१०"
+    },
+  },
+
+  "tray": {
+    "icon-size": 13,
+    "spacing": 10
+  },
+
+"custom/hyprsunset": {
+    "format": "{icon}",
+    "format-icons": {
+        "active": "󰌵",   
+        "default": "󰌵"   
+    },
+    "exec": "pgrep -x hyprsunset > /dev/null && echo '{\"alt\": \"active\", \"tooltip\": \"Luz cálida: ON\"}' || echo '{\"alt\": \"default\", \"tooltip\": \"Luz cálida: OFF\"}'",
+    "interval": 2,
+    "return-type": "json",
+    "on-click": "~/.config/hypr/scripts/toggle-sunset.sh"
+},
+"backlight": {
+    "device": "intel_backlight",
+    "format": "{icon} {percent}%",
+    "format-icons": ["󰃞", "󰃟", "󰃠"],
+    "on-scroll-up": "brightnessctl set 1%+",
+    "on-scroll-down": "brightnessctl set 1%-",
+    "on-click": "bash ~/.config/hypr/scripts/toggle-sunset.sh",
+    "min-length": 6
+  },
+
+  "backlight/slider": {
+    "min": 0,
+    "max": 100,
+    "orientation": "horizontal",
+    "device": "amdgpu_bl1",
+  },
+
+  "battery": {
+    "bat": "BAT0",
+    "states": {
+      "good": 95,
+      "warning": 20,
+      "critical": 10
+    },
+    "format": "{icon} <span foreground=\"#e5e1e9\">{capacity}%</span>",
+    "format-charging": " {capacity}%",
+    "format-plugged": " {capacity}%",
+    "format-alt": "{time} {icon}",
+	"format-icons": ["", "", "", "", ""],
+    "max-length": 25,
+    "tooltip": true,
+    "tooltip-format": "Time: {time} left\nCapacity: {health}%\n{power} watts"
+  },
+
+"pulseaudio": {
+    "format": "{icon}  {volume}%",
+    "tooltip": false,
+    "format-muted": "  Muted",
+    "on-click": "/usr/bin/kitty --class floating -e wiremix",
+    "on-scroll-up": "pamixer -i 1",
+    "on-scroll-down": "pamixer -d 1",
+    "scroll-step": 5,
+    "format-icons": {
+      "headphone": "",
+      "hands-free": "",
+      "default": ["","", "", ""]
+    }
+  },
+
+  "pulseaudio#microphone": {
+    "format": "{format_source}",
+    "format-source": " {volume}%",
+    "format-source-muted": "  Muted",
+    "on-click": "pamixer --default-source -t",
+    "on-scroll-up": "pamixer --default-source -i 5",
+    "on-scroll-down": "pamixer --default-source -d 5",
+    "scroll-step": 5
+  },
+
+
+  "network": {
+    "format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],
+    "format": "{icon}",
+    "format-wifi": "{icon}",
+    "format-ethernet": "󰀂",
+    "format-disconnected": "󰤮",
+    "tooltip-format-wifi": "{essid} ({frequency} GHz)\n⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}\n<b><i>Interface</i>:</b> <span color='#a8c5da'>{ifname}</span>\n  <b><i>Download</i>:</b> <span color='#a8c5da'>{bandwidthDownBytes}</span>\n  <b><i>Upload</i>:</b> <span color='#a8c5da'>{bandwidthUpBytes}</span>\n󰩟  <b><i>IP</i>:</b> <span color='#a8c5da'>{ipaddr}</span>",
+    "tooltip-format-ethernet": "⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
+    "tooltip-format-disconnected": "Disconnected",
+    "interval": 3,
+    "spacing": 1,
+    "on-click": "/usr/bin/kitty --class floating -e impala"
+  },
+
+  "memory": {
+    "states": {
+      "c": 90, // critical
+      "h": 60, // high
+      "m": 30 // medium
+    },
+    "interval": 10,
+    "format": "󰾆 {used}GB",
+    "format-m": "󰾅 {used}GB",
+    "format-h": "󰓅 {used}GB",
+    "format-c": " {used}GB",
+    "format-alt": "󰾆 {percentage}%",
+    "max-length": 10,
+    "tooltip": true,
+    "tooltip-format": "󰾆 {percentage}%\n {used:0.1f}GB/{total:0.1f}GB"
+  },
+
+  "cpu": {
+    "interval": 10,
+    "format": "󰍛 {usage}%",
+    "format-alt": "{icon0}{icon1}{icon2}{icon3}",
+    "format-icons": [" ", "▂", "▃", "▄", "▅", "▆", "▇", "█"]
+  },
+
+"clock#day": {
+        "format": "{:%H:%M}",                // 24-hour clock
+        "format-alt": "<i>{:%A, %B %d}</i>", // Day of the week
+        "tooltip-format": "{calendar}",
+        "calendar": {
+            "mode": "month",
+            "format": {
+                "months": "<span color='#ffffff'><b><i>{}</i></b></span>", // Month format
+                "days": "<span color='#ffffff'>{}</span>",                 // Day format
+                "weekdays": "<span color='#c75583'><b>{}</b></span>",      // Weekday format
+                "today": "<span color='#1C1F33'><b>{}</b></span>"          // Today format
+            }
+        },
+        "actions": {
+            "on-scroll-up": "shift_up",
+            "on-scroll-down": "shift_down"
+        }
+    },
+
+ }

@@ -1,0 +1,63 @@
+# Configuracion basica
+set -g default-terminal "tmux-256color"
+set -ga terminal-overrides ",*RGB"
+set -g mouse on
+set -g set-clipboard on
+
+unbind  C-b
+set -g prefix `
+bind-key ` send-prefix
+
+# Estilo de la tmux
+set -g status-style bg=default,fg=white,bright
+set -g window-status-current-style "fg=blue,bright"
+set -g status-left "[#S]"
+set -g status-right "#[fg=white,bright]#T%H:%M %d-%b"
+set -g status-position top
+set -g mode-key vi
+
+set -g renumber-windows on
+set -g focus-events on
+set -g pane-border-style "fg=#00a7e1"
+set -g pane-active-border-style "fg=#00a7e1,bold"
+
+# Dividir ventanas
+unbind %
+unbind '"'
+bind s split-window -h -c "#{pane_current_path}"
+bind v split-window -v -c "#{pane_current_path}"
+
+# # Desplazarse por ventanas estilo VIM (y sin prefix)
+bind -n C-h select-pane -L
+bind -n C-j select-pane -D
+bind -n C-k select-pane -U
+bind -n C-l select-pane -R
+
+
+# Recargar Configuracion
+unbind r
+bind r source-file $HOME/.config/tmux/tmux.conf
+bind q kill-pane
+
+# Copiar estilo VIM
+set-window-option -g mode-keys vi
+bind-key -T copy-mode-vi v send-keys -X begin-selection
+bind-key -T copy-mode-vi C-v send-keys -X rectangle-toggle
+bind-key -T copy-mode-vi y send-keys -X copy-selection-and-cancel
+unbind -T copy-mode-vi MouseDragEnd1Pane
+
+# Pestañas
+set -g base-index 1
+set -g pane-base-index 1
+
+# Pluggins
+set -g @plugin 'tmux-plugins/tpm'
+set -g @plugin 'tmux-plugins/tmux-sensible'
+set -g @plugin 'tmux-plugins/tmux-resurrect'
+set -g @plugin 'sainnhe/tmux-fzf'
+set -g @plugin 'christoomey/vim-tmux-navigator'
+
+set -g @fzf-launch-key 'F'
+set -g @fzf-options '-p -w 80% -h 80%'
+
+run '~/.tmux/plugins/tpm/tpm'

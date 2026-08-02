@@ -1,0 +1,111 @@
+// ─────────────────────────────────────────────────
+// Logo generated with chafa
+// Command:
+//   chafa --symbols all -c full --preprocess on chafa.png -s 40x40 >! logo.txt
+// ─────────────────────────────────────────────────
+{
+  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+  "logo": {
+    // "type": "builtin",
+    "type": "file",
+    "source": "~/.config/fastfetch/logo.txt",
+    "padding": {
+      "right": 2,
+    },
+  },
+
+  // ─────────────────────────────────────────────────
+  // Global display settings
+  //
+  // keyWidth keeps the key column aligned by forcing a fixed width.
+  // The current layout assumes a consistent visible width for each key:
+  //   "  icon  Label" = 2 spaces + 2-wide icon + 2 spaces + label padding
+  // ─────────────────────────────────────────────────
+  "display": {
+    "separator": " → ",
+    "key": {
+      "width": 18,
+    },
+    "color": {
+      "keys": "red",
+    },
+  },
+
+  // ─────────────────────────────────────────────────
+  // Modules
+  //
+  // Key format convention:
+  //   " icon  Label  "
+  //   └1sp┘└icon┘└2sp┘└─ label padded for alignment ─┘
+  // Nerd Font icons are treated as 2-column wide for alignment.
+  // ─────────────────────────────────────────────────
+  "modules": [
+    // user
+    {
+      "type": "title",
+      "keyWidth": 0,
+      "color": {
+        "user": "#7e5920",
+        "at": "white",
+        "host": "#7e5920",
+      },
+    },
+    {
+      "type": "custom",
+      "format": "\u001b[90m⠶⠶⠶⠶⠶⠶⠶⠶⠶⠶⠶⠶⠶⠶⠶⠶⠶⠶⠶⠶⠶⠶⠶⠶⠶⠶⠶⠶⠶⠶⠶⠶⠶⠶⠶⠶⠶⠶⠶⠶⠶⠶⠶⠶⠶⠶⠶⠶⠶⠶⠶",
+    },
+
+    // Separator
+
+    // Hardware
+    // { "type": "custom", "format": "\u001b[1;32m 󰌢  Hardware\u001b[0m", },
+    // { "type": "host", "key": " 󰍹  Machine", "keyColor": "#DC851F", },
+    // { "type": "cpu", "key": " 󰻠  CPU    ", "keyColor": "#DC851F", "showPeCoreCount": true, },
+    // { "type": "gpu", "key": " 󰢮  GPU    ", "keyColor": "#DC851F", "detectionMethod": "auto", },
+    { "type": "memory", "key": " 󰍛  RAM    ", "keyColor": "#DC851F", },
+    { "type": "swap", "key": " 󰓡  Swap   ", "keyColor": "#DC851F", },
+    { "type": "disk", "key": " 󰋊  Disk   ", "keyColor": "#DC851F", "folders": "/", },
+
+    "break",
+
+    // System
+    // { "type": "custom", "format": "\u001b[1;33m   System\u001b[0m", },
+    { "type": "os", "key": " 󰻀  OS     ", "keyColor": "#45462A", },
+    { "type": "kernel", "key": " 󰌢  Kernel ", "keyColor": "#45462A", },
+    // { "type": "bios", "key": " 󰖙  BIOS   ", "keyColor": "#45462A", },
+    // { "type": "packages", "key": " 󰏖  Pkgs   ", "keyColor": "#45462A", },
+    { "type": "shell", "key": " 󰆍  Shell  ", "keyColor": "#45462A", },
+
+    "break",
+
+    // Desktop
+    // { "type": "custom", "format": "\u001b[1;35m 󰇄  Desktop\u001b[0m", },
+    { "type": "de", "key": " 󰧨  DE     ", "keyColor": "#145C9E", },
+    { "type": "wm", "key": " 󱂬  WM     ", "keyColor": "#145C9E", },
+    { "type": "wmtheme", "key": " 󰉼  Theme  ", "keyColor": "#145C9E", },
+    { "type": "icons", "key": " 󰀻  Icons  ", "keyColor": "#145C9E", },
+    { "type": "cursor", "key": " 󰊠  Cursor ", "keyColor": "#145C9E", },
+    { "type": "font", "key": " 󰛖  Font   ", "keyColor": "#145C9E", },
+    { "type": "terminal", "key": " 󰄛  Term   ", "keyColor": "#145C9E", },
+    { "type": "terminalfont", "key": " 󰛖  TFont  ", "keyColor": "#145C9E", },
+
+    "break",
+
+    // Uptime / time
+    // { "type": "custom", "format": "\u001b[1;36m 󰅐  System Info\u001b[0m", },
+    // {
+    //   "type": "command",
+    //   "key": " 󰛡  OS Age ",
+    //   "keyColor": "cyan",
+    //   "text": "birth_install=$(stat -c %W / 2>/dev/null || echo 0); current=$(date +%s); diff=$(( (current - birth_install) / 86400 )); echo \"$diff days\"",
+    // },
+    // { "type": "uptime", "key": " 󱫐  Uptime ", "keyColor": "cyan", },
+    // { "type": "datetime", "key": " 󰃰  Time   ", "keyColor": "cyan", "format": "{year}-{month-pretty}-{day-pretty}  {hour-pretty}:{minute-pretty}:{second-pretty}", },
+    // { "type": "localip", "key": " 󰩟  IP     ", "keyColor": "cyan", "showIpv4": true, "showIpv6": false, },
+
+    // "break",
+
+    // Color palette
+    { "type": "colors", "paddingLeft": 2, "symbol": "circle", "block": { "width": 3, "height": 1, }, },
+  ],
+}

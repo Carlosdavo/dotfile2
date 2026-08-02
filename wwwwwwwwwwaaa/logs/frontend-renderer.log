@@ -1,0 +1,85 @@
+[2026-07-28 14:52:22.287][info] Loaded translations es-419/messages
+[2026-07-28 14:52:22.289][info] Loaded translations es-419/relay-locations
+[2026-07-28 14:52:22.291][info] setAccountExpiry(2026-08-23T14:24:11.000Z) called at 2026-07-28T18:52:22.290Z
+[2026-07-28 14:52:22.291][verbose] Tunnel state: disconnected
+[2026-07-28 14:52:22.292][verbose] Initial: Wrong content height: 404, expected 568
+[2026-07-28 14:52:22.461][verbose] Map canvas scale factor: 1, using: 1
+[2026-07-28 14:52:24.428][verbose] Tunnel state: connecting
+[2026-07-28 14:52:24.630][verbose] Tunnel state: connecting
+[2026-07-28 14:52:25.793][verbose] Tunnel state: connected
+[2026-07-28 14:52:26.821][verbose] Tunnel state: connected
+[2026-07-28 15:04:21.045][verbose] Map canvas scale factor: 1, using: 1
+[2026-07-28 15:04:37.259][verbose] Tunnel state: connecting
+[2026-07-28 15:04:37.260][verbose] Tunnel state: connecting
+[2026-07-28 15:04:37.283][verbose] Map canvas scale factor: 1, using: 1
+[2026-07-28 15:04:37.759][verbose] Tunnel state: connected
+[2026-07-28 15:04:38.592][verbose] Tunnel state: connected
+[2026-07-28 15:04:41.442][info] setAccountExpiry(2026-08-23T14:24:11.000Z) called at 2026-07-28T19:04:41.442Z
+[2026-07-28 15:05:07.753][verbose] Map canvas scale factor: 1, using: 1
+[2026-07-28 15:05:13.014][verbose] Map canvas scale factor: 1, using: 1
+[2026-07-28 15:05:14.605][verbose] Tunnel state: connecting
+[2026-07-28 15:05:14.650][verbose] Tunnel state: connecting
+[2026-07-28 15:05:14.715][verbose] Tunnel state: connecting
+[2026-07-28 15:05:15.300][verbose] Tunnel state: connected
+[2026-07-28 15:05:16.125][verbose] Tunnel state: connected
+[2026-07-28 15:05:18.329][verbose] Map canvas scale factor: 1, using: 1
+[2026-07-28 15:05:18.335][verbose] Tunnel state: connecting
+[2026-07-28 15:05:18.341][verbose] Tunnel state: connecting
+[2026-07-28 15:05:18.962][verbose] Tunnel state: connected
+[2026-07-28 15:05:20.223][verbose] Tunnel state: connected
+[2026-07-28 15:40:23.147][verbose] Tunnel state: disconnecting
+[2026-07-28 15:40:23.229][verbose] Tunnel state: error
+[2026-07-28 15:40:25.629][verbose] Tunnel state: connecting
+[2026-07-28 15:40:26.461][verbose] Tunnel state: connected
+[2026-07-28 15:40:27.502][verbose] Tunnel state: connected
+[2026-07-28 16:23:09.718][info] setAccountExpiry(2026-08-23T14:24:11.000Z) called at 2026-07-28T20:23:09.718Z
+[2026-07-28 16:23:25.958][verbose] Tunnel state: disconnecting
+[2026-07-28 16:23:26.030][verbose] Tunnel state: disconnecting
+[2026-07-28 16:23:26.615][verbose] Tunnel state: disconnected
+[2026-07-28 16:23:27.223][verbose] Tunnel state: disconnected
+[2026-07-28 16:25:29.479][verbose] Map canvas scale factor: 1, using: 1
+[2026-07-28 18:20:25.005][info] Daemon is disconnected. Resetting UI state.
+[2026-07-28 18:20:34.185][verbose] Tunnel state: disconnected
+[2026-07-28 18:20:34.219][verbose] Tunnel state: disconnected
+[2026-07-28 18:20:35.179][verbose] Map canvas scale factor: 1, using: 1
+[2026-07-28 18:22:40.901][info] setAccountExpiry(2026-08-23T14:24:11.000Z) called at 2026-07-28T22:22:40.901Z
+[2026-07-28 18:42:44.872][info] Daemon is disconnected. Resetting UI state.
+[2026-07-28 18:42:50.584][verbose] Tunnel state: disconnected
+[2026-07-28 18:42:50.804][verbose] Tunnel state: disconnected
+[2026-07-28 18:42:53.584][verbose] Map canvas scale factor: 1, using: 1
+[2026-07-28 18:42:59.126][info] setAccountExpiry(2026-08-23T14:24:11.000Z) called at 2026-07-28T22:42:59.126Z
+[2026-07-28 19:36:54.563][info] Daemon is disconnected. Resetting UI state.
+[2026-07-28 20:06:40.766][verbose] Tunnel state: disconnected
+[2026-07-28 20:06:40.768][verbose] Tunnel state: disconnected
+[2026-07-28 20:06:40.969][verbose] Map canvas scale factor: 1, using: 1
+[2026-07-28 20:06:49.618][info] setAccountExpiry(2026-08-23T14:24:11.000Z) called at 2026-07-29T00:06:49.618Z
+[2026-07-28 20:13:54.498][info] Daemon is disconnected. Resetting UI state.
+[2026-07-28 20:14:00.009][verbose] Tunnel state: disconnected
+[2026-07-28 20:14:00.021][verbose] Tunnel state: disconnected
+[2026-07-28 20:14:01.040][verbose] Map canvas scale factor: 1, using: 1
+[2026-07-28 20:14:08.747][info] setAccountExpiry(2026-08-23T14:24:11.000Z) called at 2026-07-29T00:14:08.747Z
+[2026-07-28 23:52:37.267][info] Daemon is disconnected. Resetting UI state.
+[2026-07-29 05:09:37.758][verbose] Tunnel state: disconnected
+[2026-07-29 05:09:37.760][verbose] Tunnel state: disconnected
+[2026-07-29 05:09:38.159][verbose] Map canvas scale factor: 1, using: 1
+[2026-07-29 05:09:46.465][info] setAccountExpiry(2026-08-23T14:24:11.000Z) called at 2026-07-29T09:09:46.465Z
+[2026-07-29 11:25:31.535][info] Daemon is disconnected. Resetting UI state.
+[2026-07-29 11:56:09.747][verbose] Tunnel state: disconnected
+[2026-07-29 11:56:09.753][verbose] Tunnel state: disconnected
+[2026-07-29 11:56:10.007][verbose] Map canvas scale factor: 1, using: 1
+[2026-07-29 11:56:18.482][info] setAccountExpiry(2026-08-23T14:24:11.000Z) called at 2026-07-29T15:56:18.482Z
+[2026-07-29 12:16:30.460][info] Daemon is disconnected. Resetting UI state.
+[2026-07-29 14:13:00.085][verbose] Tunnel state: disconnected
+[2026-07-29 14:13:00.099][verbose] Tunnel state: disconnected
+[2026-07-29 14:13:00.513][verbose] Map canvas scale factor: 1, using: 1
+[2026-07-29 14:13:08.334][info] setAccountExpiry(2026-08-23T14:24:11.000Z) called at 2026-07-29T18:13:08.334Z
+[2026-07-29 15:48:17.940][info] Daemon is disconnected. Resetting UI state.
+[2026-07-29 15:48:24.089][verbose] Tunnel state: disconnected
+[2026-07-29 15:48:24.097][verbose] Tunnel state: disconnected
+[2026-07-29 15:48:24.835][verbose] Map canvas scale factor: 1, using: 1
+[2026-07-29 15:48:33.032][info] setAccountExpiry(2026-08-23T14:24:11.000Z) called at 2026-07-29T19:48:33.032Z
+[2026-07-29 16:12:12.506][info] Daemon is disconnected. Resetting UI state.
+[2026-07-29 16:12:19.196][verbose] Tunnel state: disconnected
+[2026-07-29 16:12:19.212][verbose] Tunnel state: disconnected
+[2026-07-29 16:12:20.692][verbose] Map canvas scale factor: 1, using: 1
+[2026-07-29 16:12:28.008][info] setAccountExpiry(2026-08-23T14:24:11.000Z) called at 2026-07-29T20:12:28.008Z

@@ -1,0 +1,7 @@
+:root {
+    --primary:    #a4c9fe;
+    --secondary:  #bcc7db;
+    --on-surface: #e1e2e9;
+    --surface:    #111318;
+    --outline:    #8d9199;
+}

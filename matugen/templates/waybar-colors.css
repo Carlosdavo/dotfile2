@@ -1,0 +1,7 @@
+:root {
+    --primary:    {{colors.primary.dark.hex}};
+    --secondary:  {{colors.secondary.dark.hex}};
+    --on-surface: {{colors.on_surface.dark.hex}};
+    --surface:    {{colors.surface.dark.hex}};
+    --outline:    {{colors.outline.dark.hex}};
+}

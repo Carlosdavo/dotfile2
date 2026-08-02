@@ -1,0 +1,111 @@
+-- lua/plugins/fzf-lua.lua
+return {
+  "ibhagwan/fzf-lua",
+  dependencies = {
+    "nvim-tree/nvim-web-devicons",
+    {
+      "aznhe21/actions-preview.nvim",
+      config = function()
+        require("actions-preview").setup({
+          -- Cambiamos el backend para usar la interfaz rápida de fzf-lua
+          backend = { "fzf-lua" },
+          extensions = { "env" },
+        })
+      end,
+    },
+  },
+  cmd = "FzfLua",
+  -- Definimos las keys usando una función exactamente igual a tu config de Telescope
+  keys = function()
+    local fzf = require("fzf-lua")
+
+    -- Equivalente exacto a tu función git_files (find_files sin ignore)
+    local function git_files()
+      fzf.files({ no_ignore = true })
+    end
+
+    return {
+      { "<leader>f", fzf.files, desc = "Find files" },
+      { "<leader>fH", function() require("fzf-lua").files({ hidden = true }) end, desc = "Find files (hidden)" },
+      { "<leader>g", fzf.live_grep, desc = "Live grep" },
+      { "<leader>sg", git_files, desc = "Find files (no ignore)" },
+      { "<leader>sb", fzf.buffers, desc = "Buffers" },
+      { "<leader>si", fzf.grep_cword, desc = "Grep string" },
+      { "<leader>so", fzf.oldfiles, desc = "Old files" },
+      { "<leader>sh", fzf.help_tags, desc = "Help tags" },
+      { "<leader>sm", fzf.man_pages, desc = "Man pages" },
+      { "<leader>G", fzf.git_commits, desc = "Git commits" },
+      { "<leader>sr", fzf.lsp_references, desc = "LSP references" },
+      { "<leader>sd", fzf.diagnostics_document, desc = "Diagnostics" },
+      { "<leader>sT", fzf.lsp_typedefs, desc = "LSP type definitions" },
+      { "<leader>ss", fzf.blines, desc = "Fuzzy find in buffer" },
+      { "<leader>st", fzf.builtin, desc = "Fzf-lua builtins" },
+      { "<leader>sk", fzf.keymaps, desc = "Keymaps" },
+      { "<leader>sa", function() require("actions-preview").code_actions() end, desc = "Code actions" },
+      
+      -- Picker custom para clonar de forma exacta el comportamiento de telescope-env
+      {
+        "<leader>se",
+        function()
+          fzf.fzf_exec("env", {
+            prompt = "Env❯ ",
+            winopts = { title = " Environment Variables " },
+            actions = {
+              ["default"] = function(selected)
+                if selected and selected[1] then
+                  -- Copia la variable de entorno seleccionada al portapapeles del sistema
+                  vim.fn.setreg("+", selected[1])
+                  print("Copiado al portapapeles: " .. selected[1])
+                end
+              end,
+            },
+          })
+        end,
+        desc = "Env vars",
+      },
+    }
+  end,
+  config = function()
+    local fzf = require("fzf-lua")
+
+    fzf.setup({
+      -- Clona tus winopts/layout_config sin bordes, prompt arriba y estrategia ascendente
+      winopts = {
+        height = 0.85, -- Altura adaptativa (85% de la pantalla)
+        width = 0.85,  -- Ancho adaptativo (85% de la pantalla)
+        border = "none", -- Equivale a tus borderchars vacíos "" (Look limpio sin bordes)
+        preview = {
+          border = "none",
+          layout = "horizontal",
+          horizontal = "right:50%", -- Preview a la derecha ocupando el 50%
+        },
+      },
+      -- Configuración interna del binario fzf
+      fzf_opts = {
+        -- Equivalente exacto a sorting_strategy = "ascending" + prompt_position = "top"
+        ["--layout"] = "reverse",
+        ["--info"] = "inline",
+      },
+      -- Configuración específica de cada módulo para los iconos de devicons
+      files = {
+        prompt = "Files❯ ",
+        git_icons = true,
+        file_icons = true,
+        color_icons = true,
+      },
+      grep = {
+        prompt = "Grep❯ ",
+        input_prompt = "Grep For❯ ",
+      },
+      buffers = {
+        prompt = "Buffers❯ ",
+        file_icons = true,
+        color_icons = true,
+      },
+    })
+    
+    -- fzf-lua se registra automáticamente como el backend para los select nativos de Neovim,
+    -- por lo que reemplaza de forma directa a telescope-ui-select sin configuraciones extra.
+    fzf.register_ui_select()
+  end,
+}
